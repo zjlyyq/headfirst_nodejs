@@ -6,7 +6,8 @@ int main() {
     std::cin >> total;
     while (std::cin >> book)
     {
-        total += book;
+        if (book.isbn() == total.isbn())
+            total += book;
     }
 
     std::cout << total << std::endl;
